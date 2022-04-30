@@ -1,0 +1,13 @@
+#!/usr/bin/tclsh
+set d [gets stdin]
+for {set i 0} {$i < $d} {incr i} {
+    for {set j 0} {$j < $d} {incr j} {
+         set k [expr $i + $j]
+         if { $k % 2 == 0 } { puts -nonewline "*" } else {
+   puts -nonewline " "
+}
+        
+    }
+    puts -nonewline "\n"
+}
+# "-nonewline" is to print the value on same line until it terminates to  other line
